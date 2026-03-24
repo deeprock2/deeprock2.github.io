@@ -5,60 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benim Yolum - deeprock2</title>
     <style>
+        /* Temel Sıfırlama ve Font Ayarları */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f7f9fc;
             color: #333;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px; /* Mobil için kenar boşluğu */
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Kutuları alt alta diz */
             align-items: center;
             min-height: 100vh;
         }
+
+        /* Ana Taşıyıcı Kutu */
         .container {
-            max-width: 800px;
-            padding: 40px;
+            width: 100%; /* Mobilde tam genişlik */
+            max-width: 800px; /* Maksimum genişlik sınırı */
+            padding: 30px;
             background-color: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             text-align: center;
+            margin-bottom: 20px; /* Kutular arası boşluk */
+            box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
         }
-        h1 {
+
+        h2 {
             color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+            font-size: 1.8em;
+            margin-top: 0;
         }
+
         p {
-            font-size: 1.1em;
+            font-size: 1.05em;
             color: #555;
-            margin-bottom: 2em;
+            margin-bottom: 1.5em;
         }
+
+        /* Responsive Buton */
         .button {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 14px 28px;
             font-size: 1em;
             font-weight: bold;
             color: #fff;
             background-color: #007bff;
             border-radius: 8px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: transform 0.2s, background-color 0.3s ease;
         }
+
         .button:hover {
             background-color: #0056b3;
+            transform: translateY(-2px); /* Küçük bir etkileşim animasyonu */
+        }
+
+        /* Mobil Düzenlemeler (Media Query) */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .button {
+                width: 100%; /* Mobilde butonun kolay tıklanması için tam genişlik */
+                box-sizing: border-box;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Pritif: Priority, Timer, Focus</h1>
+    <h2>Pritif: Priority, Timer, Focus</h2>
     <p>
         Pritif is a time management and task scheduling app designed to help you manage your day more efficiently. 
         Prioritize your tasks, create focus sessions with a timer, track your daily routines, and progress towards your goals in a more systematic way. 
-        Gather, organize, and act on new ideas that come to mind in one place.
     </p>
     <a href="https://play.google.com/store/apps/details?id=com.benimyolum.pritif" class="button">
         Download from Google Play
@@ -66,7 +91,7 @@
 </div>
 
 <div class="container">
-    <h1>GitHub Followers Following</h1>
+    <h2>GitHub Followers Following</h2>
     <p>
         Manage your GitHub followers and following list with ease.
         Instantly see who unfollowed you and keep your follower list organized.
